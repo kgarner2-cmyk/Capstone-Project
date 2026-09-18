@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katrina Garner | Technical Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Katrina Garner</h1>
+        <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">☰</button>
+        <nav id="main-nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="about.html">About & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card hero-card">
+            <h2 class="card-title-centered">Technical Projects & Labs</h2>
+            <hr class="card-divider">
+            <p class="hero-text-centered">Demonstrating practical IT support, network administration, and web system capabilities.</p>
+        </section>
+
+        <div class="two-column-layout">
+            <article class="card project-card">
+                <h3> Interactive DOM Application</h3>
+                <hr class="card-divider">
+                <p>I have created a dynamic web project demonstrating JavaScript DOM event manipulation, interactive state changes, and live user feedback controls.</p>
+                <div class="skills-tags">
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">DOM Manipulation</span>
+                    <span class="skill-badge">Event Handling</span>
+                    <span class="skill-badge">HTML5/CSS3</span>
+                </div>
+                <div class="btn-group">
+                    <a href="https://kgarner2-cmyk.github.io/Homework-7-Interactive-DOM-Project/" target="_blank" rel="noopener" class="submit-btn">
+                        Live Demo ↗
+                    </a>
+                    <a href="https://github.com/kgarner2-cmyk/Homework-7-Interactive-DOM-Project" target="_blank" rel="noopener" class="submit-btn">
+                        GitHub Repo ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <h3>Responsive IT Support Web Application</h3>
+                <hr class="card-divider">
+                <p>I've also designed and deployed an accessible, mobile-responsive web platform built with semantic HTML5, CSS Grid/Flexbox, and DOM manipulation to simulate enterprise ticketing operations.</p>
+                <div class="skills-tags">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS Grid</span>
+                    <span class="skill-badge">WCAG AA</span>
+                    <span class="skill-badge">JavaScript</span>
+                </div>
+                <div class="btn-group">
+                    <a href="https://github.com/kgarner2-cmyk/capstone-draft" target="_blank" rel="noopener" class="submit-btn">
+                        GitHub Repo ↗
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <section class="card">
+            <h3>Live Help Desk Diagnostics Simulator</h3>
+            <hr class="card-divider">
+            <p style="margin-bottom: 1rem;">Select an incoming ticket issue to execute diagnostic command logic:</p>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <select id="ticket-select" aria-label="Select Ticket Scenario">
+                    <option value="dns">Ticket #402 - Cannot Access Domain Name (DNS Resolution Failure)</option>
+                    <option value="ip">Ticket #403 - IP Conflict Alert (DHCP Lease Overlap)</option>
+                    <option value="ad">Ticket #404 - User Account Locked Out (Active Directory)</option>
+                </select>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="runDiagnostic()">Run Command Script</button>
+
+            <div id="diagnostic-output" class="diagnostic-console">> Waiting for diagnostic execution...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katrina Garner. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

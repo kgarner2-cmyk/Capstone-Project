@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katrina Garner | About & Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Katrina Garner</h1>
+        <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">☰</button>
+        <nav id="main-nav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html" aria-current="page">About & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card hero-card">
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <!-- Profile Image with automatic SVG Fallback -->
+                <img id="profile-img" 
+                     src="avatar.png" 
+                     alt="Katrina Garner Anime Profile Avatar"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect width=\'200\' height=\'200\' fill=\'%230d0214\'/><circle cx=\'100\' cy=\'100\' r=\'85\' fill=\'%231e032b\' stroke=\'%23ffd700\' stroke-width=\'3\'/><circle cx=\'60\' cy=\'70\' r=\'30\' fill=\'%23d946ef\'/><circle cx=\'140\' cy=\'70\' r=\'30\' fill=\'%23d946ef\'/><ellipse cx=\'100\' cy=\'100\' rx=\'35\' ry=\'40\' fill=\'%23794619\'/><ellipse cx=\'85\' cy=\'95\' rx=\'6\' ry=\'9\' fill=\'%23d946ef\'/><ellipse cx=\'115\' cy=\'95\' rx=\'6\' ry=\'9\' fill=\'%23d946ef\'/><polygon points=\'40,195 160,195 145,150 55,150\' fill=\'%2318092c\' stroke=\'%23ffd700\' stroke-width=\'2\'/><line x1=\'70\' y1=\'165\' x2=\'120\' y2=\'165\' stroke=\'%234ade80\' stroke-width=\'3\'/></svg>';"
+                     style="width: 140px; height: 140px; border-radius: 50%; border: 3px solid #ffd700; object-fit: cover; box-shadow: 0 0 14px rgba(217, 70, 239, 0.7); background-color: #0d0214; display: inline-block;">
+                
+                <h2 class="card-title-centered" style="margin-top: 0.75rem;">About Me</h2>
+            </div>
+            
+            <hr class="card-divider">
+            <p class="hero-text-centered">
+                I am an Information Technology student pursuing my Associate degree, focused on starting in help desk support and progressing into cybersecurity analysis.
+            </p>
+            <p class="hero-text-centered">
+                My passion lies in hands-on system administration, solving user technical issues, and continuously expanding my practical skills in networking, Active Directory, and system security.
+            </p>
+        </section>
+
+        <div class="two-column-layout">
+            <section class="card focus-card">
+                <h3>IT Background & Aspirations</h3>
+                <hr class="card-divider">
+                <p style="margin-bottom: 1rem;">
+                    My technical foundation includes desktop OS troubleshooting, hardware diagnostics, TCP/IP networking, and Active Directory user provisioning. I specialize in breaking down technical issues to provide efficient support for end users.
+                </p>
+                <p>
+                    <strong>Career Aspirations:</strong> I aim to secure an entry-level Help Desk / IT Support role while pursuing my CompTIA A+ certification, laying the groundwork to advance into Cybersecurity Operations (SOC) Analysis.
+                </p>
+            </section>
+
+            <section class="card focus-card">
+                <h2 style="color: #f472b6; font-size: 1.5rem; margin-bottom: 0.25rem;">Get In Touch</h2>
+                <hr class="card-divider">
+                
+                <h3 style="color: #f472b6; font-size: 1.25rem; margin-bottom: 0.5rem;">Contact Information</h3>
+                <hr class="card-divider">
+
+                <p style="margin-bottom: 0.5rem;">Email: <a href="mailto:kgarner2@my.campus.edu" style="color: #f472b6;">kgarner2@my.campus.edu</a></p>
+                <p style="margin-bottom: 1.25rem;">GitHub: <a href="https://github.com/kgarner2-cmyk" target="_blank" rel="noopener" style="color: #f472b6;">github.com/kgarner2-cmyk</a></p>
+
+                <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.'); this.reset();">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="contact-name" style="display: block; margin-bottom: 0.3rem;">Name *</label>
+                        <input type="text" id="contact-name" required style="width: 100%; padding: 0.6rem; background: #0d0214; border: 1px solid #ffd700; border-radius: 6px; color: #f3e8ff;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="contact-email" style="display: block; margin-bottom: 0.3rem;">Email *</label>
+                        <input type="email" id="contact-email" required style="width: 100%; padding: 0.6rem; background: #0d0214; border: 1px solid #ffd700; border-radius: 6px; color: #f3e8ff;">
+                    </div>
+
+                    <div style="margin-bottom: 1.25rem;">
+                        <label for="contact-message" style="display: block; margin-bottom: 0.3rem;">Message *</label>
+                        <textarea id="contact-message" rows="4" required style="width: 100%; padding: 0.6rem; background: #0d0214; border: 1px solid #ffd700; border-radius: 6px; color: #f3e8ff; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="pink-glow-btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Katrina Garner. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
