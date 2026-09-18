@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katrina Garner | IT Support Portfolio</title>
+    <title>Katrina Garner | IT Student Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -23,38 +23,43 @@
 
     <main>
         <section class="card hero-card">
-            <h2 class="card-title-centered">IT Support Specialist Portfolio</h2>
+            <h2 class="card-title-centered">IT Student & Technical Portfolio</h2>
             <hr class="card-divider">
             <p class="hero-text-centered">
-                Welcome! I am an Information Technology professional specializing in desktop diagnostics, network administration fundamentals, and user support operations.
+                Welcome! I am an Information Technology student actively preparing for entry-level help desk support and system administration roles through hands-on lab work and coursework.
             </p>
         </section>
 
         <div class="two-column-layout">
             <section class="card focus-card">
-                <h3>Core Technical Focus</h3>
+                <h3>Interactive Skill Filter</h3>
                 <hr class="card-divider">
-                <p style="margin-bottom: 1rem;">
-                    Demonstrating tier-1 technical capabilities, system troubleshooting methodologies, and user-centric problem resolution.
-                </p>
-                <div class="skills-tags">
-                    <span class="skill-badge">Active Directory</span>
-                    <span class="skill-badge">Hardware Diagnostics</span>
-                    <span class="skill-badge">TCP/IP & Networking</span>
-                    <span class="skill-badge">Windows 10/11 Support</span>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="focus-input">Search Technical Area:</label>
+                    <input type="text" id="focus-input" placeholder="Type DNS, Hardware, AD, DHCP..." aria-label="IT Study Focus Input">
                 </div>
+
+                <div class="btn-group">
+                    <button type="button" id="enter-btn" class="pink-glow-btn" style="margin-top: 0;">Highlight</button>
+                    <button type="button" id="clear-btn" class="submit-btn" style="margin-top: 0;">Clear</button>
+                </div>
+
+                <p id="focus-output" class="status-text" style="margin-top: 1rem; font-style: italic; min-height: 1.5rem;">
+                    Active Search: None
+                </p>
             </section>
 
             <section class="card focus-card">
-                <h3>Technical Skill Set & Objectives</h3>
+                <h3>Core Technical Competencies</h3>
                 <hr class="card-divider">
-                <p class="status-text" style="margin-bottom: 0.75rem;">Interactive Filter — Select to highlight core capabilities:</p>
+                <p class="status-text" style="margin-bottom: 0.75rem;">Hands-on skills & active lab practice:</p>
                 
                 <ul id="hurdles-list" class="hurdles-list">
-                    <li tabindex="0">Tier-1 & Tier-2 Desktop Support & Hardware Troubleshooting</li>
-                    <li tabindex="0">Active Directory User Provisioning & Group Policy Management</li>
-                    <li tabindex="0">Network Diagnostics (DNS, DHCP, Subnetting, TCP/IP)</li>
-                    <li tabindex="0">CompTIA A+ Core Certification Preparation</li>
+                    <li tabindex="0">DNS Resolution & Network Troubleshooting</li>
+                    <li tabindex="0">Hardware Diagnostics & Workstation Repair</li>
+                    <li tabindex="0">Active Directory User Provisioning & Account Unlocks</li>
+                    <li tabindex="0">DHCP Configuration & IP Lease Management</li>
                 </ul>
             </section>
         </div>
