@@ -1,7 +1,7 @@
 function applySkillFilter() {
     const input = document.getElementById('skill-search') || document.querySelector('.focus-card input[type="text"]');
-    const items = document.querySelectorAll('#skills-list li, .diagnostic-card ul li');
-    const consoleOutput = document.getElementById('filter-console') || document.querySelector('.focus-card .diagnostic-console');
+    const items = document.querySelectorAll('#skills-list li, #hurdles-list li, .focus-card ul li, .diagnostic-card ul li');
+    const consoleOutput = document.getElementById('filter-console') || document.getElementById('focus-output') || document.querySelector('.focus-card .diagnostic-console');
 
     if (!input) return;
 
@@ -14,9 +14,11 @@ function applySkillFilter() {
 
         if (filterValue === '' || skillData.includes(filterValue) || textContent.includes(filterValue)) {
             item.style.display = 'list-item';
+            item.classList.add('highlight');
             visibleCount++;
         } else {
             item.style.display = 'none';
+            item.classList.remove('highlight');
         }
     });
 
@@ -24,15 +26,15 @@ function applySkillFilter() {
         if (filterValue === '') {
             consoleOutput.textContent = 'Active Filter: None (Showing all competencies)';
         } else {
-            consoleOutput.textContent = `Active Filter: "${filterValue}"\nMatching competencies found: ${visibleCount}`;
+            consoleOutput.textContent = `Active Filter: "${filterValue}" | Matching competencies found: ${visibleCount}`;
         }
     }
 }
 
 function clearSkillFilter() {
     const input = document.getElementById('skill-search') || document.querySelector('.focus-card input[type="text"]');
-    const items = document.querySelectorAll('#skills-list li, .diagnostic-card ul li');
-    const consoleOutput = document.getElementById('filter-console') || document.querySelector('.focus-card .diagnostic-console');
+    const items = document.querySelectorAll('#skills-list li, #hurdles-list li, .focus-card ul li, .diagnostic-card ul li');
+    const consoleOutput = document.getElementById('filter-console') || document.getElementById('focus-output') || document.querySelector('.focus-card .diagnostic-console');
 
     if (input) {
         input.value = '';
@@ -40,6 +42,7 @@ function clearSkillFilter() {
 
     items.forEach(item => {
         item.style.display = 'list-item';
+        item.classList.remove('highlight');
     });
 
     if (consoleOutput) {
@@ -98,7 +101,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const skillInput = document.getElementById('skill-search') || document.querySelector('.focus-card input[type="text"]');
+    const enterBtn = document.getElementById('enter-btn') || document.querySelector('.focus-card button.pink-glow-btn');
+    const clearBtn = document.getElementById('clear-btn') || document.querySelector('.focus-card button.submit-btn');
+    
+    if (enterBtn) {
+        enterBtn.addEventListener('click', applySkillFilter);
+    }
+    
+    if (clearBtn) {
+        clearBtn.addEventListener('click', clearSkillFilter);
+    }
+
+    const skillInput = document.getElementById('skill-search') || document.getElementById('focus-input') || document.querySelector('.focus-card input[type="text"]');
     if (skillInput) {
         skillInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
